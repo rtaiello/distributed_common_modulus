@@ -1,0 +1,22 @@
+import secrets
+import os
+
+def run():
+    p_arrays = Array(3, sint)
+    q_arrays = Array(3, sint)
+    zero = sint(0)
+    @for_range_opt(3)
+    def _(i):
+        p_arrays[i] = sint.get_input_from(i)
+        q_arrays[i] = sint.get_input_from(i)
+    p = sum(p_arrays)
+    q = sum(q_arrays)
+
+    N = p * q
+    return N + zero
+
+modulus = run()
+modulus = modulus.reveal()
+print_ln('%s', modulus)
+
+
